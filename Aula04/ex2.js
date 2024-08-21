@@ -24,3 +24,11 @@ class Usuario{
 
     }
 }
+const Usuario1 = new Usuario(); // cria um objeto Usuario 1 a partir da classe Usuario
+Usuario1.nome="Daniel Vieira";
+Usuario1.login="Daniel";
+Usuario1.senha="1234";
+Usuario1.cpf="12025678942";
+Usuario1.celular="19984315647";
+Usuario1.exibir_info();
+Usuario1.verifica_login("Daniel","12345");
