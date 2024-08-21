@@ -10,6 +10,26 @@ class Casa{
         console.log(`A cor da casa é ${this.cor} e tem ${this.qtdecomodos} comodos`);
         
     }
+    // método abrir janela
+    abrirjanelas(qtde){
+        console.log(`Abrir ${qtde} janelas`);
+
+    }
+    fecharjanelas(qtde){
+        if(qtde ==2){
+            console.log("Todas as janelas estão fechadas");
+        }
+        else{
+            console.log(`Fechar ${qtde} janelas`);
+        }
+        
+    }
+    abrirportas(){
+        console.log("Portas abertas");
+    }
+    fecharportas(){
+        console.log("Porta fechada");
+    }
 
 }
 /*
