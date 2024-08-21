@@ -14,8 +14,7 @@ class Animal {
   class Cachorro extends Animal {
     constructor(nome, idade, raca) {
       // Chama o construtor da classe base
-      super(nome, idade);
-      this.raca = raca;
+     
     }
     // Método sobrescrito
     fazerSom() {
