@@ -25,4 +25,7 @@ class Animal {
       console.log(`Nome: ${this.nome}, Idade: ${this.idade}, Raça: ${this.raca}`);
     }
   }
-  
+  const Rocky = new Cachorro();
+  Rocky.nome = "Rocky";
+  Rocky.idade = "2";
+  Rocky.exibirInfo();
