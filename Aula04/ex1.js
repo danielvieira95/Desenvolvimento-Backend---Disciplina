@@ -19,8 +19,11 @@ class Casa{
         if(qtde ==2){
             console.log("Todas as janelas estão fechadas");
         }
+        if(qtde>2){
+               console.log(`Não existe ${qtde} janelas para serem fechadas`);
+        }
         else{
-            console.log(`Fechar ${qtde} janelas`);
+         console.log(`Fechada ${qtde} janelas`);
         }
         
     }
@@ -50,3 +53,7 @@ const Casa2 = new Casa();
 Casa2.cor = "Vermelha";
 Casa2.qtdecomodos = 5;
 Casa2.exibeinfo();
+Casa2.abrirjanelas(1);
+Casa2.abrirportas();
+Casa2.abrirjanelas(2);
+Casa2.fecharjanelas(2);
