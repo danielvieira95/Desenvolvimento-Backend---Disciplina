@@ -6,8 +6,8 @@ class Casa{
         this.qtdecomodos=null; // parametro de qtde de comodos 
     }
        // metódo para exibir as informações da casa
-        exibeinfo(cor,qtdecomodos) {
-        console.log(`A cor da casa é ${cor} e tem ${qtdecomodos} comodos`);
+        exibeinfo() {
+        console.log(`A cor da casa é ${this.cor} e tem ${this.qtdecomodos} comodos`);
         
     }
 
@@ -24,4 +24,9 @@ main();
 let minhaCasa = new Casa(); // cria um objeto chamado minha casa
 minhaCasa.cor = "Amarela";
 minhaCasa.qtdecomodos= 4;
-minhaCasa.exibeinfo(minhaCasa.cor,minhaCasa.qtdecomodos);
+minhaCasa.exibeinfo();
+
+const Casa2 = new Casa();
+Casa2.cor = "Vermelha";
+Casa2.qtdecomodos = 5;
+Casa2.exibeinfo();
