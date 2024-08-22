@@ -1,7 +1,7 @@
 class Animal {
-    constructor(nome, idade) {
-      this.nome = nome;
-      this.idade = idade;
+    constructor() {
+      this.nome = null;
+      this.idade = null;
     }
   
     // Método da classe base
@@ -12,7 +12,9 @@ class Animal {
   // extends herança, a classe cachorro herda da classe animal algumas 
   // características como nome e idade
   class Cachorro extends Animal {
-    constructor(nome, idade, raca) {
+    constructor() {
+        super();
+        this.raca = null;
       // Chama o construtor da classe base
      
     }
@@ -28,4 +30,5 @@ class Animal {
   const Rocky = new Cachorro();
   Rocky.nome = "Rocky";
   Rocky.idade = "2";
+  Rocky.raca = "Amstaff";
   Rocky.exibirInfo();
