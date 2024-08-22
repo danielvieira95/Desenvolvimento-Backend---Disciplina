@@ -1,7 +1,7 @@
 class Usuario{
     constructor(){
         this.nome=null;
-        this.idade;
+        this.idade=null;
     }
     exibeinfo(){
         console.log(`Nome ${this.nome}, idade ${this.idade}`);
