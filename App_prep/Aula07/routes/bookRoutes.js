@@ -31,3 +31,7 @@ router.get('/books/search', (req, res) => {
 
 module.exports = router;
 
+// get http://localhost:3000/api/books
+
+// post http://localhost:3000/api/books
+// {"title": "Senai", "author": "Daniel", "year": 2024, "isbn": "6030"}
