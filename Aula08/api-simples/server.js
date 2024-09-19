@@ -30,7 +30,7 @@ app.post('/data',(req,res)=>{
 app.get('/data',(req,res)=>{
     // parse para leitura dos dados
     const {nome,idade} = req.body;
-    res.send(`Nome ${nome}, idade ${idade}`);
+    //res.send(`Nome ${nome}, idade ${idade}`);
     res.json(dados) // armazena a resposta
 });
 
