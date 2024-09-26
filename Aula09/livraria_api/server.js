@@ -4,7 +4,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
-
+const bodyParser = require('body-parser');
 // inicialização do app
 
 const app = express();
@@ -22,7 +22,7 @@ mongoose.connect('mongodb+srv://danielvieira2006:da2576896@cluster0.j1d4z.mongod
 
 // Importação das rotas
 const bookRoutes = require('./Routes/books');
-app.use('api/books',bookRoutes); // irá retornar a rota dos livros
+app.use('/api/books',bookRoutes); // irá retornar a rota dos livros
 // Define a porta do servidor
 app.listen(3000,()=>{
     console.log('Servidor executando na porta 3000');

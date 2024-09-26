@@ -6,7 +6,7 @@ const router = express.Router(); // cria o elemento para rotear com base nas req
 // Cria rota do post
 // async é por conta que a requisição tem um certo tempo para retornar
 router.post('/',async(req,res)=>{
-const {title, author,year} = req.body; // Extrai os dados da requisição
+const {title,author,year} = req.body; // Extrai os dados da requisição
 // tenta salvar o livro no banco de dados
 try{
     const newBook = new Book({title, author, year});
@@ -22,13 +22,12 @@ try{
 // rota Get
 // req - requisição
 // res - resposta
-router.get('/',async (req,res)=>{
+router.get('/',async(req,res)=>{
 try{
-    const books = await Books.find(); // busca todos os livros com o metódo find
+    const books = await Book.find(); // busca todos os livros com o metódo find
     res.status(200).json(books) // retorna a lista de livros
 }catch(error){
     res.status(500).json({message: 'Erro ao buscar os livros ',error}) // retorna o erro se houver
-
 }
 });
 
