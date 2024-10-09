@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 // Função para regegistrar novos usuarios
 
-exports.register =  async(req,res)=>{
+exports.register =  async(req,res) => {
     const {username,password } = req.body;
     try{
         // Criptografa a senha antes de salvar no banco
@@ -25,7 +25,7 @@ exports.register =  async(req,res)=>{
 // função para fazer login de usuarios
 
 
-exports.login = async(resq,res)=>{
+exports.login = async(req,res)=>{
     const {username,password}= req.body;
 
     try{
