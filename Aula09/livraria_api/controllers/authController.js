@@ -48,7 +48,8 @@ exports.login = async (req, res) => {
         // Cria web token
         const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, 
             { expiresIn: '1h' });
-        res.json({ token });
+       // res.json({ token });
+        res.status(200).json({message: "Login realizado"});
     } catch (error) {
         console.error(error); // Loga o erro
         res.status(500).json({ error: 'Erro ao fazer login' });
