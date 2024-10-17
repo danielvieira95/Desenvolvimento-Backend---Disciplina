@@ -1,4 +1,6 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose') 
+// cria a variavel mongoose para realizar
+// a comunicação com o mongo db
 
 // Define o esquema de usuario
 
