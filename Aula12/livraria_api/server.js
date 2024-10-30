@@ -25,9 +25,9 @@ mongoose.connect('mongodb+srv://danielvieira2006:da2576896@cluster0.j1d4z.mongod
 // Importação das rotas
 const bookRoutes = require('./Routes/books');
 app.use('/api/books',bookRoutes); // irá retornar a rota dos livros
-//app.use('/api/auth',authRoutes);
+app.use('/api/auth',authRoutes);
 // Define a porta do servidor
-/*app.listen(5000,()=>{
+app.listen(5000,()=>{
     console.log('Servidor executando na porta 5000');
-});*/
-module.exports = app
+});
+//module.exports = app
