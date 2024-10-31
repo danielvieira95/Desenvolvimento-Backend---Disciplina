@@ -6,6 +6,6 @@ const GameSchema = new mongoose.Schema({
     rating:{type:Number,required:true},
     image:{type:String,required:true}})
 
-    module.exports = mongoose.model('Game',GameSchema);
+module.exports = mongoose.model('Game',GameSchema)
 
 

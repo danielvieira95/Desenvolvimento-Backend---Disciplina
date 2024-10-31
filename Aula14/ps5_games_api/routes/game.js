@@ -15,7 +15,10 @@ const storage = multer.diskStorage({
     }
 });
 
-const upload = multer({storage: storage});
+const upload = multer({storage: storage,
+    });
+//const upload = multer({ dest: 'uploads/' }).single('file');
+//const upload = multer({ dest: 'uploads/' }).fields([{ name: 'image', maxCount: 1 }]);
 
 
 /// Rota para cadastrar um novo jogo
@@ -28,12 +31,14 @@ router.post('/',upload.single('image'),async(req,res)=>{
             name,
             value,
             year,
-            rating, 
+            rating,
             image
         });
         await newGame.save();
+        console.log(req.body); // Check the body fields
+        console.log(req.files); // Check the uploaded files
         res.status(201).json({message: 'Jogo cadastrado com sucesso',game:newGame});
-    }catch(error){
+        }catch(error){
       res.status(500).json({message: 'Erro ao cadastrar o jogo',error})
     }
 });
@@ -43,7 +48,7 @@ router.post('/',upload.single('image'),async(req,res)=>{
 router.get('/',async(req,res)=>{
     try {
         const games = await Game.find();
-        res.status(201).json(games);
+        res.status(200).json(games);
     }catch(error){
         res.status(500).json({message:'Erro ao buscar os jogos',error});
     }
